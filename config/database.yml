@@ -20,6 +20,16 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+#production:
+#  <<: *default
+#  database: db/production.sqlite3
+
 production:
   <<: *default
-  database: db/production.sqlite3
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: sixkube_production
+  pool: 5
+  username: <%= ENV['APPNAME_DATABASE_USER'] %>
+  password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
