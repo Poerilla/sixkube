@@ -1,4 +1,27 @@
 <h1>Welcome#index</h1>
-
+<div class="jumbotron">
+    <div class="container">
+        <h1>Sixkube blogs</h1>
+        <p>Find the correlation</p>
+        <br>
+        <p>
+            <%= button_to 'Go to articles', articles_path, :method => :get,  :class => "btn btn-primary btn-lg"%>
+        </p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>Not all sharks are alike</h3>
+            <p>Though some are dangerous, sharks generally do not attack humans. Out of the 500 species known to researchers, only 30 have been known to attack humans.
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <h3>Sharks are ancient</h3>
+            <p>There is evidence to suggest that sharks lived up to 400 million years ago.
+            </p>
+        </div>
+    </div>
+</div>
 <p id=”notice”><%= notice %></p>
-<%= link_to 'My Blog', controller: 'articles' %>
+<%= link_to 'My Blog', controller: 'articles' , :class => "btn btn-primary btn-sm"%>
