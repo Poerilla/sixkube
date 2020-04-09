@@ -10,7 +10,9 @@
     <th>Text</th>
     <th></th>
   </tr>
- 
+  <tr>
+    <td><%= link_to 'New Entry', new_article_path, :class => "btn btn-primary btn-sm" %></td>
+  </tr> 
   <% @articles.each do |article| %>
     <tr>
       <td><%= article.title %></td>
@@ -24,3 +26,4 @@
     </tr>
   <% end %>
 </table>
+
