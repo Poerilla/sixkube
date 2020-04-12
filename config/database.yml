@@ -3,13 +3,13 @@ default: &default
   encoding: unicode
   host: sixkube-postgres
   username: postgres
-  password: $POSTGRES_PASSWORD
+  password: postgres
   pool: 5
 
 development:
   <<: *default
-  database: sixkube-postgres
+  database: postgres
 
 test:
   <<: *default
-  database: sixkube-postgres
+  database: postgres

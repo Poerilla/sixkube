@@ -2,7 +2,9 @@
 set -e
 
 # Remove a potentially pre-existing server.pid for Rails.
-rm -f /myapp/tmp/pids/server.pid
+rm -f /sixkube/tmp/pids/server.pid
+
+rails db:migrate RAILS_ENV=development
 
 # Then exec the container's main process (what's set as CMD in the Dockerfile).
 exec "$@"
