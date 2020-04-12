@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: db
+  host: sixkube-postgres
   username: postgres
   password: $POSTGRES_PASSWORD
   pool: 5
