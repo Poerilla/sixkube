@@ -7,7 +7,12 @@ default: &default
   pool: 5
 
 development:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  host: sixkube.com
+  username: postgres
+  password: $POSTGRES_PASSWORD
+  pool: 5
   database: postgres
 
 test:

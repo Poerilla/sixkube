@@ -23,7 +23,12 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+# Use dotenv-rails, to keep the API token as an environment variable
+gem 'dotenv-rails'
+# Use faraday to make requests to make request 3rd party api's
+gem 'faraday'
+# Use OAuth2 for oauth clients
+gem 'oauth2'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
