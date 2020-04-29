@@ -24,3 +24,30 @@ The last step is to install Bundler
 Now we make sure all dependencies in your Gemfile are available to your application.
 
 `bundle install`
+
+Install Rails
+
+`gem install rails -v 6.0.2.2`
+
+If you're using rbenv, you'll need to run the following command to make the rails executable available:
+
+`rbenv rehash`
+
+Now that you've installed Rails, you can run the rails -v command to make sure you have everything installed correctly:
+
+`rails -v`
+
+`# Rails 6.0.2.2`
+
+Setting Up PostgreSQL. For PostgreSQL, we're going to add a new repository to easily install a recent version of Postgres.
+
+`sudo apt install postgresql-11 libpq-dev`
+
+The postgres installation doesn't setup a user for you, so you'll need to follow these steps to create a user with permission to create databases. Feel free to replace chris with your username.
+
+`sudo -u postgres createuser {user_name} -s`
+
+If you would like to set a password for the user, you can do the following
+
+`sudo -u postgres psql
+postgres=# \password {user_name}`
