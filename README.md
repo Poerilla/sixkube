@@ -11,8 +11,8 @@ Install ruby using rbenv
 
 If you do not use rbenv install using rvm
 
-`rvm install 2.7.1
-rvm use 2.7.1 --default
+`rvm install 2.5.1
+rvm use 2.5.1 --default
 ruby -v`
 
 If you neither have rvm or rbenv it is recommended that you use them as they make switching ruby versions simpler than having to install ruby from source. For a quick and easy tutorial on setting up ruby and Rails appls please follow [this](https://www.google.com) link.
