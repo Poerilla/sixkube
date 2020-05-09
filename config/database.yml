@@ -1,4 +1,14 @@
 default: &default
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: sqlite3
+
+produciton:
   adapter: postgresql
   encoding: unicode
   host: sixkube-postgres
@@ -6,15 +16,6 @@ default: &default
   password: $POSTGRES_PASSWORD
   pool: 5
 
-development:
-  adapter: postgresql
-  encoding: unicode
-  host: sixkube.com
-  username: postgres
-  password: $POSTGRES_PASSWORD
-  pool: 5
-  database: postgres
-
 test:
   <<: *default
-  database: postgres
+  database: db/test.sqlite3
